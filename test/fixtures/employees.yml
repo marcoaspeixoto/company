@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fname: MyString
+  iname: MyString
+  dob: 2022-10-01
+  empid: MyString
+
+two:
+  fname: MyString
+  iname: MyString
+  dob: 2022-10-01
+  empid: MyString
