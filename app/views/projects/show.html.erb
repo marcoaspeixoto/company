@@ -10,5 +10,13 @@
   <%= @project.description %>
 </p>
 
+<p>
+  <strong>Employee:</strong>
+  <% @project.employees.each do |x| %>
+    <td><%= x.fname %></td>
+    <td><%= x.iname %></td><br>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>

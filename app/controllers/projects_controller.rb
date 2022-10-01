@@ -21,7 +21,7 @@ class ProjectsController < ApplicationController
 
   # POST /projects or /projects.json
   def create
-    @project = Project.new(project_params)
+    @project = Project.new(params.require(:project).permit(:title, :description, employee_ids: []))
 
     respond_to do |format|
       if @project.save
@@ -37,7 +37,7 @@ class ProjectsController < ApplicationController
   # PATCH/PUT /projects/1 or /projects/1.json
   def update
     respond_to do |format|
-      if @project.update(project_params)
+      if @project.update(params.require(:project).permit(:title, :description, employee_ids: []))
         format.html { redirect_to project_url(@project), notice: "Project was successfully updated." }
         format.json { render :show, status: :ok, location: @project }
       else

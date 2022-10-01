@@ -21,6 +21,11 @@
     <%= form.text_area :description %>
   </div>
 
+  <div class="field">
+    <%= form.label :employee %>
+    <%= form.collection_check_boxes :employee_ids, Employee.all, :id, :full_name, { hide_label: true } %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
