@@ -12,9 +12,9 @@
 
 <p>
   <strong>Employee:</strong>
-  <% @project.employees.each do |x| %>
-    <td><%= x.fname %></td>
-    <td><%= x.iname %></td><br>
+  <% @project.employees.each do |employee| %>
+    <td><%= employee.fname %></td>
+    <td><%= employee.iname %></td><br>
   <% end %>
 </p>
 

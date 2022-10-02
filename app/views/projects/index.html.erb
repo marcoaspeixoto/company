@@ -18,9 +18,9 @@
         <td><%= project.title %></td>
         <td><%= project.description %></td>
 
-        <% project.employees.each do |x| %>
-        <td><%= x.fname %></td>
-          <td><%= x.iname %></td>
+        <% project.employees.each do |employee| %>
+        <td><%= employee.fname %></td>
+          <td><%= employee.iname %></td>
           <% end %>
         <td><%= link_to 'Show', project %></td>
         <td><%= link_to 'Edit', edit_project_path(project) %></td>
